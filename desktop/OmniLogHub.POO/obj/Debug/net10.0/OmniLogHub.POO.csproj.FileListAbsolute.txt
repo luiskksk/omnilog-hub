@@ -1,0 +1,15 @@
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\bin\Debug\net10.0\OmniLogHub.POO.exe
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\bin\Debug\net10.0\OmniLogHub.POO.deps.json
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\bin\Debug\net10.0\OmniLogHub.POO.runtimeconfig.json
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\bin\Debug\net10.0\OmniLogHub.POO.dll
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\bin\Debug\net10.0\OmniLogHub.POO.pdb
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.AssemblyInfoInputs.cache
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.AssemblyInfo.cs
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.csproj.CoreCompileInputs.cache
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.sourcelink.json
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.dll
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\refint\OmniLogHub.POO.dll
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.pdb
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\OmniLogHub.POO.genruntimeconfig.cache
+C:\Users\LUISHENRIQUEMORGENST\Desktop\omnilog-hub\desktop\OmniLogHub.POO\obj\Debug\net10.0\ref\OmniLogHub.POO.dll
