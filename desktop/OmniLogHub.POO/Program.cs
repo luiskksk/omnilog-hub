@@ -2,114 +2,15 @@
 using System;
 using System.Collections.Generic;
 
-// HERANÇA E POLIMORFISMO
-abstract class Veiculo
-{
-    public string Modelo { get; set; }
-    public double CapacidadeKg { get; set; }
+namespace OmniLogHub.POO;
 
-    public Veiculo(string modelo, double capacidadeKg)
-    {
-        Modelo = modelo;
-        CapacidadeKg = capacidadeKg;
-    }
-
-    public abstract double CalcularFrete(double distanciaKm);
-}
-
-class Caminhao : Veiculo
-{
-    public Caminhao(string modelo, double capacidadeKg)
-        : base(modelo, capacidadeKg) { }
-
-    public override double CalcularFrete(double distanciaKm)
-        => distanciaKm * 4.50;
-}
-
-class Van : Veiculo
-{
-    public Van(string modelo, double capacidadeKg)
-        : base(modelo, capacidadeKg) { }
-
-    public override double CalcularFrete(double distanciaKm)
-        => distanciaKm * 2.20;
-}
-
-class Moto : Veiculo
-{
-    public Moto(string modelo, double capacidadeKg)
-        : base(modelo, capacidadeKg) { }
-
-    public override double CalcularFrete(double distanciaKm)
-        => distanciaKm * 1.10;
-}
-
-// INTERFACE E FORMAS DE PAGAMENTO
-interface IPagamento
-{
-    bool Pagar(double valor);
-}
-
-class PagamentoPix : IPagamento
-{
-    public bool Pagar(double valor)
-    {
-        Console.WriteLine($"Pagamento via Pix: R$ {valor:F2}");
-        return valor > 0;
-    }
-}
-
-class PagamentoCartao : IPagamento
-{
-    public bool Pagar(double valor)
-    {
-        Console.WriteLine($"Pagamento via cartão: R$ {valor:F2}");
-        return valor > 0;
-    }
-}
-
-class PagamentoDinheiro : IPagamento
-{
-    public bool Pagar(double valor)
-    {
-        Console.WriteLine($"Pagamento em dinheiro: R$ {valor:F2}");
-        return valor > 0;
-    }
-}
-
-// PILHA: ÚLTIMO A ENTRAR, PRIMEIRO A SAIR
-class Pilha<T>
-{
-    private Stack<T> itens = new Stack<T>();
-
-    public void Adicionar(T item) => itens.Push(item);
-
-    public T Remover() => itens.Pop();
-
-    public int Quantidade => itens.Count;
-}
-
-// FILA: PRIMEIRO A ENTRAR, PRIMEIRO A SAIR
-class Fila<T>
-{
-    private Queue<T> itens = new Queue<T>();
-
-    public void Adicionar(T item) => itens.Enqueue(item);
-
-    public T Remover() => itens.Dequeue();
-
-    public int Quantidade => itens.Count;
-}
-
-// EXECUÇÃO E TESTES
 class Program
 {
     static void Main()
     {
         Console.WriteLine("=== OMNILOG HUB ===\n");
 
-        // Testando polimorfismo
-        List<Veiculo> veiculos = new List<Veiculo>
+        List<Veiculo> veiculos = new()
         {
             new Caminhao("Volvo", 10000),
             new Van("Fiat Ducato", 1500),
@@ -126,27 +27,32 @@ class Program
 
         Console.WriteLine("\n=== PAGAMENTOS ===");
 
-        IPagamento pagamento = new PagamentoPix();
-        bool aprovado = pagamento.Pagar(150);
+        IPagamento pix = new PagamentoPix();
+        IPagamento cartao = new PagamentoCartao();
+        IPagamento dinheiro = new PagamentoDinheiro();
 
-        Console.WriteLine($"Aprovado: {aprovado}");
+        Console.WriteLine($"Pix aprovado: {pix.Pagar(150)}");
+        Console.WriteLine($"Cartão aprovado: {cartao.Pagar(200)}");
+        Console.WriteLine($"Dinheiro aprovado: {dinheiro.Pagar(80)}");
 
         Console.WriteLine("\n=== PILHA ===");
 
-        Pilha<string> pilha = new Pilha<string>();
+        Pilha<string> pilha = new();
         pilha.Adicionar("Pedido 1");
         pilha.Adicionar("Pedido 2");
 
         Console.WriteLine($"Removido: {pilha.Remover()}");
+        Console.WriteLine($"Itens restantes: {pilha.Quantidade}");
 
         Console.WriteLine("\n=== FILA ===");
 
-        Fila<string> fila = new Fila<string>();
+        Fila<string> fila = new();
         fila.Adicionar("Pedido 1");
         fila.Adicionar("Pedido 2");
 
         Console.WriteLine($"Removido: {fila.Remover()}");
+        Console.WriteLine($"Itens restantes: {fila.Quantidade}");
 
-        Console.WriteLine("\nTestes básicos concluídos!");
+        Console.WriteLine("\nExecução concluída!");
     }
 }
