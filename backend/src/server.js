@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const pool = require('./config/database');
 const usuariosRoutes = require('./routes/usuarios');
+const produtosRoutes = require('./routes/produtos');
 
 require('dotenv').config();
 
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/usuarios', usuariosRoutes);
-
+app.use('/api/produtos', produtosRoutes);
 app.get('/api/health', async (req, res) => {
     try {
         await pool.query('SELECT 1');
