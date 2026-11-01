@@ -1,4 +1,4 @@
-import { describe, it, expect, afterAll } from 'vitest';
+import { describe, it, expect, afterAll, beforeAll } from 'vitest';
 import request from 'supertest';
 import bcrypt from 'bcryptjs';
 
@@ -12,11 +12,19 @@ app.use('/api/usuarios', usuariosRoutes);
 
 describe('API de usuários', () => {
     const emailTeste = `vitest-${Date.now()}@omnilog.local`;
+    const emailDuplicado = `vitest-duplicado-${Date.now()}@omnilog.local`;
+
+    beforeAll(async () => {
+        await pool.execute(
+            'INSERT INTO usuarios (nome, email, senha_hash, perfil) VALUES (?, ?, ?, ?)',
+            ['Usuario Duplicado', emailDuplicado, await bcrypt.hash('Teste12345', 12), 'operador']
+        );
+    });
 
     afterAll(async () => {
         await pool.execute(
-            'DELETE FROM usuarios WHERE email = ?',
-            [emailTeste]
+            'DELETE FROM usuarios WHERE email IN (?, ?)',
+            [emailTeste, emailDuplicado]
         );
         await pool.end();
     });
@@ -85,7 +93,7 @@ describe('API de usuários', () => {
             .post('/api/usuarios')
             .send({
                 nome: 'Duplicado',
-                email: 'teste@omnilog.local',
+                email: emailDuplicado,
                 senha: 'Teste12345'
             });
 
