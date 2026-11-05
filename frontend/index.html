@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniLog Hub | Painel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">OMNI<span>LOG</span></div>
+        <div class="status">
+            <span class="bolinha"></span>
+            <span id="status-api">Verificando sistema...</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="boas-vindas">
+            <p class="subtitulo">SISTEMA DE GESTÃO LOGÍSTICA</p>
+            <h1>Painel de controle</h1>
+            <p>Gerencie e acompanhe os produtos da OmniLog Hub.</p>
+        </section>
+
+        <section class="resumo">
+            <div class="card">
+                <span>Produtos cadastrados</span>
+                <strong id="total-produtos">--</strong>
+            </div>
+            <div class="card">
+                <span>Status da API</span>
+                <strong id="status-resumo">Verificando</strong>
+            </div>
+        </section>
+
+        <section class="produtos">
+            <div class="titulo-lista">
+                <div>
+                    <p class="subtitulo">INVENTÁRIO</p>
+                    <h2>Produtos</h2>
+                </div>
+                <input type="search" id="pesquisa" placeholder="Pesquisar produto...">
+            </div>
+
+            <div id="lista-produtos" class="grade">
+                <p>Carregando produtos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>OmniLog Hub © 2026 — Sistema Integrado de Gestão Logística</footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

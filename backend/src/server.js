@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const pool = require('./config/database');
 const usuariosRoutes = require('./routes/usuarios');
 const produtosRoutes = require('./routes/produtos');
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, '../../frontend')));
 
 app.use('/api/usuarios', usuariosRoutes);
 app.use('/api/produtos', produtosRoutes);

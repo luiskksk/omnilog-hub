@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+}
+
+header {
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111c30;
+    border-bottom: 1px solid #26344c;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.bolinha {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f59e0b;
+}
+
+main {
+    max-width: 1150px;
+    margin: 55px auto;
+    padding: 0 25px;
+}
+
+.subtitulo {
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.boas-vindas > p:last-child {
+    color: #94a3b8;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 40px 0 55px;
+}
+
+.card {
+    background: #142139;
+    border: 1px solid #263a58;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card span {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.card strong {
+    display: block;
+    font-size: 30px;
+    margin-top: 12px;
+    color: #38bdf8;
+}
+
+.titulo-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+input {
+    background: #142139;
+    border: 1px solid #334966;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: white;
+    outline: none;
+    width: 260px;
+}
+
+input:focus {
+    border-color: #38bdf8;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.produto {
+    background: #142139;
+    border: 1px solid #263a58;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.produto h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.produto p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.preco {
+    color: #38bdf8 !important;
+    font-size: 21px !important;
+    font-weight: bold;
+    margin-top: 18px !important;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 35px 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 750px) {
+    .grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .resumo, .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-lista {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
