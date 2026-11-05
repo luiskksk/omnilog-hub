@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+backend/.env
+npm-debug.log*
+
+# .NET
+**/bin/
+**/obj/
+
+# Visual Studio Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
